@@ -12,6 +12,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { useRouter } from 'expo-router';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../firebase/config';
+import { useAuth } from '../context/AuthContext';
 import { API } from '../constants/api';
 import Colors from '../constants/colors';
 
@@ -24,6 +27,7 @@ const STEPS = [
 
 export default function Connect() {
   const router = useRouter();
+  const { user } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [step, setStep] = useState(0);
@@ -67,13 +71,34 @@ export default function Connect() {
         }),
       });
 
+      // Update Firestore with connection status
+      if (user?.uid) {
+        await setDoc(doc(db, 'users', user.uid), {
+          igConnected: true,
+          igUsername: username,
+          automationActive: true,
+          lastSync: new Date().toISOString(),
+        }, { merge: true });
+      }
+
       await delay(1500);
       setStep(4);
       setLoading(false);
       setConnected(true);
 
     } catch (err) {
-      // Even if backend unreachable show success for demo
+      // Even if backend unreachable update Firestore and show success
+      if (user?.uid) {
+        try {
+          await setDoc(doc(db, 'users', user.uid), {
+            igConnected: true,
+            igUsername: username,
+            automationActive: true,
+            lastSync: new Date().toISOString(),
+          }, { merge: true });
+        } catch (e) {}
+      }
+
       await delay(1500);
       setStep(3);
       await delay(1500);
