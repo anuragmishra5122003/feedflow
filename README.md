@@ -9,7 +9,18 @@ FeedFlow is a mobile application that automatically personalizes your Instagram 
 
 ## 📲 Download APK
 
-👉 **[Download FeedFlow APK](https://expo.dev/accounts/anuragflexop/projects/feedflow/builds/17b50c10-8970-44d1-a0db-62763b8bb335)**
+👉 **[Download FeedFlow APK](https://expo.dev/accounts/anuragflexop/projects/feedflow/builds/b499f869-9386-4503-a045-7fd92c95c593)**
+
+---
+
+## 📱 App Screenshots
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/anuragmishra5122003/feedflow/main/screen1.jpeg" width="22%" />
+  <img src="https://raw.githubusercontent.com/anuragmishra5122003/feedflow/main/screen2.jpeg" width="22%" />
+  <img src="https://raw.githubusercontent.com/anuragmishra5122003/feedflow/main/screen3.jpeg" width="22%" />
+  <img src="https://raw.githubusercontent.com/anuragmishra5122003/feedflow/main/screen4.jpeg" width="22%" />
+</p>
 
 ---
 
