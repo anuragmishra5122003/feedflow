@@ -27,6 +27,12 @@
     ],
     "packagerOpts": {
       "config": "metro.config.js"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1187b78a-3fdf-4414-8a35-c26103f9cba8"
+      }
     }
   }
 }

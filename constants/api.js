@@ -1,5 +1,4 @@
-// Replace with your actual local IP from ipconfig
-const BASE_URL = 'http://192.168.1.7:3001';
+const BASE_URL = 'https://feedflow-backend-xbhd.onrender.com';
 
 export const API = {
   status: `${BASE_URL}/status`,
