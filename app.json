@@ -13,8 +13,8 @@
     },
     "android": {
       "adaptiveIcon": {
-  "backgroundColor": "#0A0A0F"
-},
+        "backgroundColor": "#0A0A0F"
+      },
       "package": "com.feedflow.app"
     },
     "ios": {
@@ -24,6 +24,9 @@
     "scheme": "feedflow",
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "packagerOpts": {
+      "config": "metro.config.js"
+    }
   }
 }
