@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "FeedFlow",
+    "slug": "feedflow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0F"
+    },
+    "android": {
+      "adaptiveIcon": {
+  "backgroundColor": "#0A0A0F"
+},
+      "package": "com.feedflow.app"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.feedflow.app"
+    },
+    "scheme": "feedflow",
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
